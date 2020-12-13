@@ -6,7 +6,7 @@ namespace CapaLogica_ClassLibrary_
 {
     public class Utilidades
     {
-        public static  string getNombreDelMes(int mes)
+        public static string getNombreDelMes(int mes)
         {
             string aux = "";
             switch(mes)
@@ -39,6 +39,19 @@ namespace CapaLogica_ClassLibrary_
                     aux = "Mes no valido";break;
             }//end switch
             return aux;
+        }
+
+        public static Boolean FECHA(string fecha)
+        {
+            try
+            {
+                DateTime.Parse(fecha);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

@@ -13,6 +13,13 @@
         .auto-style2 {
             width: 368px;
         }
+        .auto-style3 {
+            width: 368px;
+            height: 30px;
+        }
+        .auto-style4 {
+            height: 30px;
+        }
     </style>
 </head>
 <body>
@@ -56,8 +63,20 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">&nbsp;</td>
-                    <td>
+                    <td class="auto-style3">Ingrese uan fecha</td>
+                    <td class="auto-style4">
+                        <asp:TextBox ID="txtFecha" runat="server"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style4">
+                        <asp:Label ID="lblFecha" runat="server"></asp:Label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="auto-style3">&nbsp;</td>
+                    <td class="auto-style4">
                         <asp:Button ID="btnCalcular" runat="server" OnClick="btnCalcular_Click" Text="Calcular" />
                     </td>
                 </tr>

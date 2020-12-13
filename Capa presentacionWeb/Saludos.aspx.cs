@@ -25,6 +25,9 @@ namespace Capa_presentacionWeb
 
             int mes = Convert.ToInt32(this.txtNumMes.Text);
             this.lblMes.Text = CapaLogica_ClassLibrary_.Utilidades.getNombreDelMes(mes);
+
+            string fecha = this.txtFecha.Text;
+            lblFecha.Text = Convert.ToString(CapaLogica_ClassLibrary_.Utilidades.FECHA(fecha));
         }
     }
 }

@@ -42,6 +42,10 @@
             this.txtMes = new System.Windows.Forms.TextBox();
             this.txtNameMes = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtFechaValida = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -78,17 +82,19 @@
             this.txtSaldoInicial.Name = "txtSaldoInicial";
             this.txtSaldoInicial.Size = new System.Drawing.Size(100, 20);
             this.txtSaldoInicial.TabIndex = 3;
+            this.txtSaldoInicial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaldoInicial_KeyPress);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(180, 144);
+            this.txtNombre.Location = new System.Drawing.Point(180, 148);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(216, 20);
             this.txtNombre.TabIndex = 4;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(386, 106);
+            this.btnCalcular.Location = new System.Drawing.Point(180, 304);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 23);
             this.btnCalcular.TabIndex = 5;
@@ -99,7 +105,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 206);
+            this.label4.Location = new System.Drawing.Point(311, 106);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 13);
             this.label4.TabIndex = 6;
@@ -108,7 +114,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(33, 239);
+            this.label5.Location = new System.Drawing.Point(417, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 7;
@@ -116,14 +122,14 @@
             // 
             // txtResultados
             // 
-            this.txtResultados.Location = new System.Drawing.Point(180, 206);
+            this.txtResultados.Location = new System.Drawing.Point(377, 106);
             this.txtResultados.Name = "txtResultados";
             this.txtResultados.Size = new System.Drawing.Size(216, 20);
             this.txtResultados.TabIndex = 8;
             // 
             // txtMensage
             // 
-            this.txtMensage.Location = new System.Drawing.Point(180, 239);
+            this.txtMensage.Location = new System.Drawing.Point(486, 151);
             this.txtMensage.Name = "txtMensage";
             this.txtMensage.Size = new System.Drawing.Size(216, 20);
             this.txtMensage.TabIndex = 9;
@@ -139,14 +145,15 @@
             // 
             // txtMes
             // 
-            this.txtMes.Location = new System.Drawing.Point(180, 180);
+            this.txtMes.Location = new System.Drawing.Point(182, 180);
             this.txtMes.Name = "txtMes";
             this.txtMes.Size = new System.Drawing.Size(100, 20);
             this.txtMes.TabIndex = 11;
+            this.txtMes.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMes_KeyPress);
             // 
             // txtNameMes
             // 
-            this.txtNameMes.Location = new System.Drawing.Point(180, 272);
+            this.txtNameMes.Location = new System.Drawing.Point(405, 183);
             this.txtNameMes.Name = "txtNameMes";
             this.txtNameMes.Size = new System.Drawing.Size(100, 20);
             this.txtNameMes.TabIndex = 12;
@@ -154,17 +161,55 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(33, 279);
+            this.label7.Location = new System.Drawing.Point(311, 183);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 13;
             this.label7.Text = "El mes es:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(33, 236);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Ingrese una fecha";
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Location = new System.Drawing.Point(180, 236);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(100, 20);
+            this.txtFecha.TabIndex = 15;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(327, 244);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 13);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "La fecha es:";
+            // 
+            // txtFechaValida
+            // 
+            this.txtFechaValida.Location = new System.Drawing.Point(405, 236);
+            this.txtFechaValida.Multiline = true;
+            this.txtFechaValida.Name = "txtFechaValida";
+            this.txtFechaValida.Size = new System.Drawing.Size(170, 27);
+            this.txtFechaValida.TabIndex = 17;
+            this.txtFechaValida.TextChanged += new System.EventHandler(this.txtFechaValida_TextChanged);
             // 
             // FrmIU
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 353);
+            this.Controls.Add(this.txtFechaValida);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNameMes);
             this.Controls.Add(this.txtMes);
@@ -202,5 +247,9 @@
         private System.Windows.Forms.TextBox txtMes;
         private System.Windows.Forms.TextBox txtNameMes;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtFecha;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtFechaValida;
     }
 }
