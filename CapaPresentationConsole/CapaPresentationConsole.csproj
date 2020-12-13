@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaLogica%28ClassLibrary%29\CapaLogica%28ClassLibrary%29.csproj">
+      <Project>{b2cb0337-178a-4189-8eac-db5732083653}</Project>
+      <Name>CapaLogica%28ClassLibrary%29</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -15,13 +15,14 @@ namespace CapaPresentationConsole
             string nombre, fecha;
             int numeroMes;
 
-            CapaLogica.Contabilidad conta = new CapaLogica.Contabilidad();
+            CapaLogica_ClassLibrary_.Contabilidad conta = new CapaLogica_ClassLibrary_.Contabilidad();
+            //Capa.Contabilidad conta = new CapaLogica.Contabilidad();
 
-            Console.WriteLine("Ingresa los siguientes valores:");
+            Console.WriteLine("Ingrese los siguientes valores:");
             Console.WriteLine();
 
             //Llenando Variables
-            Console.Write("Saldo inicial: ");
+            Console.Write("El Saldo inicial es: ");
             saldo = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Nombre: ");
@@ -37,8 +38,8 @@ namespace CapaPresentationConsole
             Console.WriteLine();
             Console.WriteLine("Resultado sueldo: {0}", conta.getSaldos(saldo));
             Console.WriteLine(conta.Saludos(nombre));
-            Console.WriteLine(CapaLogica.Utilidades.getNombreDelMes(numeroMes));
-            Console.WriteLine(CapaLogica.Utilidades.Fecha(fecha));
+            Console.WriteLine(CapaLogica_ClassLibrary_.Utilidades.getNombreDelMes(numeroMes));
+            Console.WriteLine(CapaLogica_ClassLibrary_.Utilidades.FECHA(fecha));
 
             Console.ReadKey();
         }

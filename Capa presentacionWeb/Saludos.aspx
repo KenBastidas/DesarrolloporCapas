@@ -63,7 +63,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style3">Ingrese uan fecha</td>
+                    <td class="auto-style3">Ingrese una fecha</td>
                     <td class="auto-style4">
                         <asp:TextBox ID="txtFecha" runat="server"></asp:TextBox>
                     </td>
